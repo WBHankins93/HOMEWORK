@@ -26,3 +26,15 @@ Commit 2:
 
 #5: Why might you want to reset your files back to a previous commit?
   In case you've gone too far in a project and become lost or jumbled in code that you aren't sure where to find a solution
+
+
+  Commit 3:
+
+#1: What command do you use to create a branch?
+  $ git checkout [branch-name]
+
+#2: What command do you use to use a different branch?
+  $ git merge [branch-name]
+
+#3: Why would you want to use a branch other than the default master?
+  To get a more recent version of source code after it has deployed
