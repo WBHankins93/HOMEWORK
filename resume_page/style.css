@@ -3,10 +3,28 @@ h1 {
   font-family: sans-serif;
 }
 h3 {
-  color: blue;
+  color: grey;
+  text-decoration: underline;
 }
 body {
   padding: 50px;
+  font-family: 'Arial';
+  font-weight: bolder;
 } img {
-  border-radius: 40%
+  border-radius: 40%;
+}
+a {
+  text-decoration: none;
+  font-size: 24px;
+  padding: 15px;
+}
+ol {
+  padding: 10px;
+  list-style-type: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
