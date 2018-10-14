@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const clubsSchema = new mongoose.Schema({
-  name : {type: String, required: true},
-  city: {type: String, required: true},
-  titlesWon: {type: Number},
-  image: {type: String}
-});
+// const clubsSchema = new mongoose.Schema({
+//   name : {type: String, required: true},
+//   city: {type: String, required: true},
+//   titlesWon: {type: Number},
+//   image: {type: String}
+// });
 
 const clubs = [
   {
@@ -28,6 +28,6 @@ const clubs = [
   },
 ]
 
-const Clubs = mongoose.model('Clubs', clubsSchema);
+// const Clubs = mongoose.model('Clubs', clubsSchema);
 
 module.exports = clubs;
