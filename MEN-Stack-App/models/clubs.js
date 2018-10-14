@@ -21,9 +21,9 @@ const clubs = [
     image: " "
   },
   {
-    name: "Liverpool"
-    city: "Liverpool"
-    titlesWon: 18
+    name: "Liverpool",
+    city: "Liverpool",
+    titlesWon: 18,
     image: ""
   },
 ]
