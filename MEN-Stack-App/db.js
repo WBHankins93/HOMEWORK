@@ -1,3 +1,3 @@
 const mongoose = require('mongoose');
 
-const 
+const carSchema = mongoose.Schema()
