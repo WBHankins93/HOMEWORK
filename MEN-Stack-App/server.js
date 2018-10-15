@@ -53,9 +53,19 @@ app.get('/clubs/:index', (req, res) => {
 // show route by index and edit
 // render edit route
 app.get('/clubs/:index/edit', (req, res) => {
-  res.render('edit.ejs')
+  res.render('edit.ejs', {
+    clubs: Clubs[req.params.index]
+  })
 })
 
+
+// use app.put at the route of the default index
+// take the parameters of the model and set it equal to the body
+// redirect to the default route
+app.put('/clubs/:index', (req, res) => {
+  Clubs[req.params.index] = req.body;
+  res.redirect('/clubs');
+})
 
 
 app.listen(3000, (req, res) => {
