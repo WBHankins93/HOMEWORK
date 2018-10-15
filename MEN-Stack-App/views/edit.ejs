@@ -9,10 +9,10 @@
 <body>
   <h1>Clubs Edit</h1>
 
-  <form action="/clubs" method="POST">
-    Name:<input type="text" name="name"></br>
-    City:<input type="text" name="city"></br>
-    Titles Won:<input type="text" name="titlesWon"></br>
+  <form action="/clubs<%=clubs.id%>?_method=PUT" method="POST">
+    Name:<input type="text" name="name" value="<%=clubs[i].name%>"></br>
+    City:<input type="text" name="city" value="<%=clubs[i].city%>"></br>
+    Titles Won:<input type="text" name="titlesWon" value="clubs[i].titlesWon"></br>
     Image: <input type="text" name"image"></img></br>
     <input type="submit" value="submit">
   </form>
