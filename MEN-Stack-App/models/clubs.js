@@ -29,5 +29,3 @@ const clubsSchema = new mongoose.Schema({
 // ]
 
 module.exports = mongoose.model('Clubs', clubsSchema);
-
-// module.exports = clubs;

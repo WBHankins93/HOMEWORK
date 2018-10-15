@@ -21,7 +21,10 @@
     </li>
     <button><a href="/clubs/<%=i%>"><%=clubs[i].name%> Page</a></button>
     <button><a href="/clubs/<%=i%>/edit">Edit Club</a></button>
-    <button type="button">Delete Page</button>
+    <form action="/clubs/<%=clubs[i].index%>?_method=DELETE" method="POST">
+      <input type="submit" value="delete">
+    </form
+
   </ul>
 
 

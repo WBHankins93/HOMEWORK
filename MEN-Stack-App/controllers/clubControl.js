@@ -18,14 +18,14 @@ router.get('/', (req, res) => {
 
 // Create a new route
 // make a new.ejs file
-// use app.get at default route
+// use router.get at default route
 // render new.ejs
 router.get('/new', (req, res) => {
   res.render('new.ejs')
 });
 
 
-// use app.post at the route of new page
+// use router.post at the route of new page
 // grab the body(info) of the form on new.ejs and console .log interval
 // push the body into your clubs models
 // redirect to your default route
@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
   console.log(req.body),
 
 // Rewrite original code to use mongodb
-// use .creat on the model to add new data to model
+// use .create on the model to add new data to model
   Clubs.create(req.body, (err, newClubs) => {
     if (err) {
       console.log(err)
@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
   })
 });
 
-// use app.get at the route of the show page
+// use router.get at the route of the show page
 // show route by Index
 // use findById in the model to req.params
 // render show route
@@ -60,7 +60,7 @@ router.get('/:index', (req, res) => {
 });
 
 
-// use app.get at the route of the edit page
+// use router.get at the route of the edit page
 // show route by index and edit
 // use findById in the model to req.params
 // render edit route
@@ -73,13 +73,33 @@ router.get('/:index/edit', (req, res) => {
 });
 
 
-// use app.put at the route of the default index
+// use router.put at the route of the default index
 // take the parameters of the model and set it equal to the body
 // redirect to the default route
 router.put('/:index', (req, res) => {
   Clubs[req.params.index] = req.body;
   res.redirect('/clubs');
 })
+
+// create a route to delete from the model
+// use findByIdAndRemove in the model to req.params in the index
+// redirect into default route
+router.delete('/:index', (req, res) => {
+  Clubs.findByIdAndRemove(req.params.index, (err, deleteClubs) => {
+    res.redirect('/clubs;')
+  })
+});
+
+// use a .put here to update the model
+// use findByIdAndRemove in the model to req.params in the index
+// redirect into default route
+router.put('/:index', (req, res) => {
+  Clubs.findByIdAndRemove(req.params.index, (err, updatedModel) => {
+    res.redirect('/clubs');
+  })
+})
+
+
 
 
 module.exports = router;
