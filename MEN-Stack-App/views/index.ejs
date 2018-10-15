@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-    <h1>Clubs Index Page</h1>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
-      <ul>
-        <% for (let i=0; i < clubs.length; i++) { %>
-            <li>
-            <%= clubs[i].name%></br>
-            <%= clubs[i].city%></br>
-            <%= clubs[i].titlesWon%> Titles Won</br>
-            </li>
+<body>
 
-          </ul>
+  <h1>Clubs Index Page</h1>
+  <button><a href="/clubs/new">Add New Club</a></button>
+
+  <ul>
+    <% for (let i=0; i < clubs.length; i++) { %>
+    <li>
+      <%= clubs[i].name%></br>
+      <%= clubs[i].city%></br>
+      <%= clubs[i].titlesWon%> Titles Won</br>
+    </li>
+    <button><a href="/clubs/<%=i%>" name="button"><%=clubs[i].name%> Page</a></button>
+    <button><a href="/clubs/<%=i%>/edit" name="button">Edit Club</a></button>
+    <button type="button" name="button">Delete Page</button>
+  </ul>
 
 
-      <% } %>
+  <% } %>
 
-      </ul>
+  </ul>
 
 
 
-  </body>
+</body>
+
 </html>

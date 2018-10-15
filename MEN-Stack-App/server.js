@@ -54,7 +54,8 @@ app.get('/clubs/:index', (req, res) => {
 // render edit route
 app.get('/clubs/:index/edit', (req, res) => {
   res.render('edit.ejs', {
-    clubs: Clubs[req.params.index]
+    clubs: Clubs[req.params.index],
+    index: req.params.index
   })
 })
 
