@@ -33,6 +33,7 @@ router.post('/', (req, res) => {
   console.log(req.body),
 
 // Rewrite original code to use mongodb
+// use .creat on the model to add new data to model
   Clubs.create(req.body, (err, newClubs) => {
     if (err) {
       console.log(err)
@@ -45,6 +46,7 @@ router.post('/', (req, res) => {
 
 // use app.get at the route of the show page
 // show route by Index
+// use findById in the model to req.params
 // render show route
 // check the index parameters of the model
 router.get('/:index', (req, res) => {
@@ -60,6 +62,7 @@ router.get('/:index', (req, res) => {
 
 // use app.get at the route of the edit page
 // show route by index and edit
+// use findById in the model to req.params
 // render edit route
 router.get('/:index/edit', (req, res) => {
   Clubs.findById(req.params.index, (err, foundClubs) => {
