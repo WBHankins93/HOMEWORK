@@ -37,7 +37,7 @@ app.post('/clubs', (req, res) => {
   Clubs.push(req.body)
   res.redirect('Clubs')
 });
-
+       
 // use app.get at the route of the show page
 // show route by Index
 // render show route
