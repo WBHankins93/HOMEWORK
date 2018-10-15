@@ -37,7 +37,7 @@ app.post('/clubs', (req, res) => {
   Clubs.push(req.body)
   res.redirect('Clubs')
 });
-       
+
 // use app.get at the route of the show page
 // show route by Index
 // render show route
@@ -50,8 +50,11 @@ app.get('/clubs/:index', (req, res) => {
 
 
 // use app.get at the route of the edit page
-
-
+// show route by index and edit
+// render edit route
+app.get('/clubs/:index/edit', (req, res) => {
+  res.render('edit.ejs')
+})
 
 
 
