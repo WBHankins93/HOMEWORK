@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-
+require('./db/db')
 
 
 app.get('/', (req, res) => {
