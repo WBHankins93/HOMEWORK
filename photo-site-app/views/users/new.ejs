@@ -6,14 +6,19 @@
   </head>
   <body>
     <header>
-      <h1>Users</h1>
-
+      <h1>Create New User</h1>
       <nav>
         <ul>
           <li><button type="submit"><a href="/">Home</a></button></li>
-          <li><button type="submit"><a href="/users/new">Create New User</a></button></li>
+          <li><button type="submit"><a href="/users">Users Index</a></button></li>
         </ul>
       </nav>
+
+
+      <form action="/users" method="POST">
+        <input type="text" name="name">
+        <button type="submit">Create User</button>
+      </form>
     </header>
   </body>
 </html>
