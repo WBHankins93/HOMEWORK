@@ -15,7 +15,13 @@ router.get('/new', (req, res) => {
 
 
 // Make a show route here
-
+router.get('/:index', (req, res) => {
+  User.findById(req.params.id, (err, showUser) => {
+  res.render('/users/show.ejs', {
+    users: showUser
+  })
+})
+});
 
 // Create a route that will post the new user data
 // Connect the model to the .create function and call in the body

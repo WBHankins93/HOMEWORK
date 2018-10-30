@@ -38,3 +38,13 @@ Commit 2:
 
 #3: Why would you want to use a branch other than the default master?
   To get a more recent version of source code after it has deployed
+
+
+
+Commit 4:
+
+#1: Give an example for when you would use git merge and give an example for when it would be better to submit a pull request to have your branch merged
+
+
+#2: What command do you use to send all of the work that you've done locally to your remote repository?
+  git push origin master
